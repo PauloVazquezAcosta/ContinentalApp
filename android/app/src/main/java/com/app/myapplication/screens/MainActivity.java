@@ -1,17 +1,21 @@
 package com.app.myapplication.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
-import android.widget.Toast;
+
 import com.app.myapplication.R;
+import com.app.myapplication.screens.inputNames.InputNamesActivity;
 
 
 public class MainActivity extends AppCompatActivity {
     private NumberPicker selectorJugadores;
     private int numeroJugadores;
+    private static final String claveCaja = "NUMERO_JUGADORES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
         botonEmpezar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Jugadores: " + numeroJugadores,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), InputNamesActivity.class);
+                Bundle cajaJugadores = new Bundle();
+                cajaJugadores.putInt(claveCaja, numeroJugadores);
+                intent.putExtras(cajaJugadores);
+                startActivity(intent);
             }
         });
     }
