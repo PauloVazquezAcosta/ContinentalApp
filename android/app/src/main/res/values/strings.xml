@@ -5,5 +5,5 @@
     <string name="jugadores">Jugadores</string>
     <string name="numero_jugadores">X jugadores</string>
     <string name="jugador_celda_recycler">Jugador/a</string>
-    <string name="nombre_jugador">Nombre del jugador/a</string>
+    <string name="nombre_jugador">Nombre de jugador/a</string>
 </resources>

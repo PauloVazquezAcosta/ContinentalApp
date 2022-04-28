@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         selectorJugadores.setMinValue(2);
         selectorJugadores.setMaxValue(4);
 
+        numeroJugadores = selectorJugadores.getValue();
+
         selectorJugadores.setOnValueChangedListener((numberPicker, i, j) -> {
             numeroJugadores = selectorJugadores.getValue();
         });

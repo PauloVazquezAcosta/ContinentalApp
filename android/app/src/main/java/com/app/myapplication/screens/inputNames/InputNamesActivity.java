@@ -35,7 +35,7 @@ public class InputNamesActivity extends AppCompatActivity {
 
         arrayJugadores = new ArrayList<String>();
 
-        for (int i = 0; i < arrayJugadores.size(); i++) {
+        for (int i = 0; i < numeroJugadores; i++) {
             int numJugador = i + 1;
             arrayJugadores.add("Jugador/a " + numJugador);
         }
