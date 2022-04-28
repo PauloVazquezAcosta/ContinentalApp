@@ -5,8 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.myapplication.R;
 
@@ -42,5 +45,19 @@ public class InputNamesActivity extends AppCompatActivity {
 
         InputNamesAdapter adapter = new InputNamesAdapter(arrayJugadores);
         recyclerJugadores.setAdapter(adapter);
+
+        final Button botonConfirmar = findViewById(R.id.botonConfirmar);
+
+        botonConfirmar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] nombresJugadores = adapter.getNombresJugadores();
+                for (int i = 0; i < nombresJugadores.length; i++) {
+                    Toast.makeText(getApplicationContext(),nombresJugadores[i], Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
     }
 }
