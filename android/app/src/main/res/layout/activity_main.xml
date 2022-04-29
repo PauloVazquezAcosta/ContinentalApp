@@ -12,34 +12,42 @@
         android:layout_height="wrap_content"
         android:text="@string/jugadores"
         android:textAlignment="textStart"
+        android:textSize="40sp"
         android:textStyle="bold"
-        android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
     <NumberPicker
         android:id="@+id/selectorJugadores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textoJugadores"
         app:layout_constraintBottom_toTopOf="@id/botonEmpezar"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoJugadores" />
 
-
-    <Button
+    <View
         android:id="@+id/botonEmpezar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/boton_empezar"
+        android:layout_height="40dp"
+        android:background="@color/dark_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        />
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textoEmpezar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empezar"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="@id/botonEmpezar"
+        app:layout_constraintBottom_toBottomOf="@id/botonEmpezar"
+        app:layout_constraintRight_toRightOf="@id/botonEmpezar"
+        app:layout_constraintLeft_toLeftOf="@id/botonEmpezar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@
         android:text="@string/numero_jugadores"
         android:textAlignment="textStart"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.1"
@@ -21,7 +21,7 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerNombreJugadores"
+        android:id="@+id/recyclerInputNombreJugadores"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/textoJugadores"
@@ -30,16 +30,26 @@
         android:layout_marginHorizontal="100dp"
         app:layout_constraintBottom_toTopOf="@id/botonConfirmar" />
 
-    <Button
+    <View
         android:id="@+id/botonConfirmar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/boton_confirmar"
+        android:layout_height="40dp"
+        android:background="@color/dark_blue"
+        android:text="@string/empezar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        />
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textoEmpezar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="@id/botonConfirmar"
+        app:layout_constraintBottom_toBottomOf="@id/botonConfirmar"
+        app:layout_constraintRight_toRightOf="@id/botonConfirmar"
+        app:layout_constraintLeft_toLeftOf="@id/botonConfirmar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

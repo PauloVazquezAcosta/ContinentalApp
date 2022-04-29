@@ -9,13 +9,14 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 
 import com.app.myapplication.R;
+import com.app.myapplication.screens.data.Partida;
 import com.app.myapplication.screens.inputNames.InputNamesActivity;
 
 
 public class MainActivity extends AppCompatActivity {
     private NumberPicker selectorJugadores;
     private int numeroJugadores;
-    private static final String claveCaja = "NUMERO_JUGADORES";
+    private static final String clavePartida = "PARTIDA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +34,13 @@ public class MainActivity extends AppCompatActivity {
             numeroJugadores = selectorJugadores.getValue();
         });
 
-        final Button botonEmpezar = findViewById(R.id.botonEmpezar);
+        final View botonEmpezar = findViewById(R.id.botonEmpezar);
 
         botonEmpezar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Partida partida = new Partida(numeroJugadores);
                 Intent intent = new Intent(getApplicationContext(), InputNamesActivity.class);
-                Bundle cajaJugadores = new Bundle();
-                cajaJugadores.putInt(claveCaja, numeroJugadores);
-                intent.putExtras(cajaJugadores);
+                intent.putExtra(clavePartida, partida);
                 startActivity(intent);
             }
         });

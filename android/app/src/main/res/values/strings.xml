@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="boton_empezar">¡Empezar!</string>
-    <string name="boton_confirmar">Confirmar</string>
+    <string name="app_name">ContinentApp</string>
+    <string name="empezar">¡Empezar!</string>
+    <string name="confirmar">Confirmar</string>
     <string name="jugadores">Jugadores</string>
     <string name="numero_jugadores">X jugadores</string>
     <string name="jugador_celda_recycler">Jugador/a</string>
     <string name="nombre_jugador">Nombre de jugador/a</string>
     <string name="listado_jugadores_resumen">Listado de jugadores</string>
+    <string name="jugar">¡A jugar!</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="clave_partida">Partida</string>
+    <string name="numero_ronda">Número de ronda</string>
+    <string name="jugada">Jugada - Número de cartas</string>
 </resources>

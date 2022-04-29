@@ -4,32 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.resumeNames.ResumeNamesActivity">
+    tools:context=".screens.roundOne.RoundOneActivity">
+
+    <View
+        android:id="@+id/rectanguloSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/dark_blue"/>
 
     <TextView
-        android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/listado_jugadores_resumen"
-        android:textAlignment="textStart"
-        android:textStyle="bold"
-        android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="@id/rectanguloSuperior"
+        app:layout_constraintRight_toRightOf="@id/rectanguloSuperior"
+        app:layout_constraintTop_toTopOf="@id/rectanguloSuperior"
+        app:layout_constraintBottom_toBottomOf="@id/rectanguloSuperior"
+        app:layout_constraintVertical_bias="0.33"
+        android:text="@string/numero_ronda"
+        android:textColor="@color/white" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerResumenNombresJugadores"
-        android:layout_width="0dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginHorizontal="100dp"
-        app:layout_constraintBottom_toTopOf="@id/botonJugar"
-        android:layout_gravity="center_horizontal"/>
+        app:layout_constraintLeft_toLeftOf="@id/rectanguloSuperior"
+        app:layout_constraintRight_toRightOf="@id/rectanguloSuperior"
+        app:layout_constraintTop_toTopOf="@id/rectanguloSuperior"
+        app:layout_constraintBottom_toBottomOf="@id/rectanguloSuperior"
+        app:layout_constraintVertical_bias="0.66"
+        android:text="@string/jugada"
+        android:textColor="@color/white" />
 
     <View
         android:id="@+id/botonJugar"
@@ -44,7 +50,7 @@
         android:id="@+id/textoEmpezar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/jugar"
+        android:text="@string/siguiente"
         android:textColor="@color/white"
         android:textAllCaps="true"
         app:layout_constraintTop_toTopOf="@id/botonJugar"
