@@ -12,7 +12,6 @@ public class Partida implements Serializable {
     private String[] jugadasRondas;
 
 
-
     public Partida(int numeroJugadores) {
         this.numeroJugadores = numeroJugadores;
         Jugadores = new Jugador[numeroJugadores];
@@ -21,6 +20,8 @@ public class Partida implements Serializable {
         setTextoTituloJugadores();
         textoNumeroRondas = new String[numeroRondas];
         setTextoNumeroRondas();
+        jugadasRondas = new String[numeroRondas];
+        setJugadasRondas();
     }
 
     public int getNumeroJugadores() {
@@ -55,9 +56,9 @@ public class Partida implements Serializable {
         return textoNumeroRondas;
     }
 
-    public void setTextoNumeroRondas() {
+    private void setTextoNumeroRondas() {
         for (int i = 0; i < numeroRondas; i++) {
-            textoNumeroRondas[i] = "Ronda " + (i+1);
+            textoNumeroRondas[i] = "Ronda " + (i + 1);
         }
     }
 
@@ -65,7 +66,7 @@ public class Partida implements Serializable {
         return textoTituloJugadores;
     }
 
-    public void setTextoTituloJugadores() {
+    private void setTextoTituloJugadores() {
         for (int i = 0; i < numeroJugadores; i++) {
             int numeroJugador = i + 1;
             textoTituloJugadores[i] = "Jugador/a " + numeroJugador;
@@ -76,7 +77,17 @@ public class Partida implements Serializable {
         return jugadasRondas;
     }
 
-    public void setJugadasRondas() {
-        this.jugadasRondas = jugadasRondas;
+    private void setJugadasRondas() {
+        jugadasRondas[0] = "Un trío - 4 cartas";
+        jugadasRondas[1] = "Una escalera - 5 cartas";
+        jugadasRondas[2] = "Dos tríos - 7 cartas";
+        jugadasRondas[3] = "Un trío y una escalera - 8 cartas";
+        jugadasRondas[4] = "Dos escaleras - 9 cartas";
+        jugadasRondas[5] = "Tres tríos - 10 cartas";
+        jugadasRondas[6] = "Dos tríos y una escalera - 11 cartas";
+        jugadasRondas[7] = "Un trío y dos escaleras - 12 cartas";
+        jugadasRondas[8] = "Tres escaleras - 13 cartas";
+        jugadasRondas[9] = "Cuatro tríos - 13 cartas";
+
     }
 }
