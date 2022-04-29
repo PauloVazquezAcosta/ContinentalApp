@@ -1,4 +1,4 @@
-package com.app.myapplication.screens;
+package com.app.myapplication.screens.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 

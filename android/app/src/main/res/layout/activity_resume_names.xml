@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.main.MainActivity">
+    tools:context=".screens.resumeNames.ResumeNamesActivity">
 
     <TextView
         android:id="@+id/textoJugadores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/jugadores"
+        android:text="@string/listado_jugadores_resumen"
         android:textAlignment="textStart"
         android:textStyle="bold"
         android:textSize="30sp"
@@ -20,26 +20,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
-    <NumberPicker
-        android:id="@+id/selectorJugadores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textoJugadores"
-        app:layout_constraintBottom_toTopOf="@id/botonEmpezar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
 
 
-    <Button
-        android:id="@+id/botonEmpezar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/boton_empezar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
