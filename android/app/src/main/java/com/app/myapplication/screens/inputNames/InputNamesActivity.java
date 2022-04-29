@@ -35,8 +35,7 @@ public class InputNamesActivity extends AppCompatActivity {
         recyclerJugadores = findViewById(R.id.recyclerInputNombreJugadores);
         recyclerJugadores.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-
-        InputNamesAdapter adapter = new InputNamesAdapter(partida.getTextoTituloJugadores(), partida);
+        InputNamesAdapter adapter = new InputNamesAdapter(partida);
         recyclerJugadores.setAdapter(adapter);
 
         final View botonConfirmar = findViewById(R.id.botonConfirmar);

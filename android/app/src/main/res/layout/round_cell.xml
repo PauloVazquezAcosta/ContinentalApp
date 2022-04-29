@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/nombreJugadorPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/puntuacionJugadorLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="@string/jugador_celda_recycler"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/puntuacionJugadorLayout"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+
+        app:layout_constraintTop_toTopOf="@id/nombreJugadorPartida"
+        app:layout_constraintBottom_toBottomOf="@id/nombreJugadorPartida"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/puntuacionJugadorInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:hint="@string/puntuacion"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/contadorPuntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/puntuacionJugadorLayout"
+        app:layout_constraintTop_toTopOf="@id/nombreJugadorPartida"
+        app:layout_constraintBottom_toBottomOf="@id/nombreJugadorPartida"
+        android:text="@string/contadorPuntuacion"
+        />
+
+
+    <View
+    android:id="@+id/linea_separadora"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="@color/dark_blue"
+    app:layout_constraintTop_toBottomOf="@id/puntuacionJugadorLayout"
+    android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

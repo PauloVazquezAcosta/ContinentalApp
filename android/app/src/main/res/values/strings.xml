@@ -12,4 +12,6 @@
     <string name="clave_partida">Partida</string>
     <string name="numero_ronda">Número de ronda</string>
     <string name="jugada">Jugada - Número de cartas</string>
+    <string name="puntuacion">Puntuación</string>
+    <string name="contadorPuntuacion">0</string>
 </resources>
