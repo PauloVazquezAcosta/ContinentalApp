@@ -7,17 +7,20 @@ public class Partida implements Serializable {
     private int numeroJugadores;
     private Jugador[] Jugadores;
     private int numeroRondas;
+    private String[] textoTituloJugadores;
     private String[] textoNumeroRondas;
     private String[] jugadasRondas;
+
 
 
     public Partida(int numeroJugadores) {
         this.numeroJugadores = numeroJugadores;
         Jugadores = new Jugador[numeroJugadores];
         numeroRondas = 10;
-        for (int i = 0; i > numeroRondas; i++) {
-            textoNumeroRondas[i] = "Ronda " + (i+1);
-        }
+        textoTituloJugadores = new String[numeroJugadores];
+        setTextoTituloJugadores();
+        textoNumeroRondas = new String[numeroRondas];
+        setTextoNumeroRondas();
     }
 
     public int getNumeroJugadores() {
@@ -52,7 +55,28 @@ public class Partida implements Serializable {
         return textoNumeroRondas;
     }
 
-    public void setTextoNumeroRondas(String[] textoNumeroRondas) {
-        this.textoNumeroRondas = textoNumeroRondas;
+    public void setTextoNumeroRondas() {
+        for (int i = 0; i < numeroRondas; i++) {
+            textoNumeroRondas[i] = "Ronda " + (i+1);
+        }
+    }
+
+    public String[] getTextoTituloJugadores() {
+        return textoTituloJugadores;
+    }
+
+    public void setTextoTituloJugadores() {
+        for (int i = 0; i < numeroJugadores; i++) {
+            int numeroJugador = i + 1;
+            textoTituloJugadores[i] = "Jugador/a " + numeroJugador;
+        }
+    }
+
+    public String[] getJugadasRondas() {
+        return jugadasRondas;
+    }
+
+    public void setJugadasRondas() {
+        this.jugadasRondas = jugadasRondas;
     }
 }

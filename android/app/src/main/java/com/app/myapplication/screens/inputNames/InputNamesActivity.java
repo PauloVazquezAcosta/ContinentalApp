@@ -20,7 +20,6 @@ public class InputNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";
     private TextView textoNumeroJugadores;
     private RecyclerView recyclerJugadores;
-    private ArrayList<String> arrayTituloJugadores;
     private Partida partida;
 
     @Override
@@ -36,14 +35,8 @@ public class InputNamesActivity extends AppCompatActivity {
         recyclerJugadores = findViewById(R.id.recyclerInputNombreJugadores);
         recyclerJugadores.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        arrayTituloJugadores = new ArrayList<String>();
 
-        for (int i = 0; i < partida.getNumeroJugadores(); i++) {
-            int numJugador = i + 1;
-            arrayTituloJugadores.add("Jugador/a " + numJugador);
-        }
-
-        InputNamesAdapter adapter = new InputNamesAdapter(arrayTituloJugadores, partida);
+        InputNamesAdapter adapter = new InputNamesAdapter(partida.getTextoTituloJugadores(), partida);
         recyclerJugadores.setAdapter(adapter);
 
         final View botonConfirmar = findViewById(R.id.botonConfirmar);

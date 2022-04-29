@@ -19,10 +19,10 @@ import java.util.ArrayList;
 
 public class InputNamesAdapter extends RecyclerView.Adapter<InputNamesAdapter.ViewHolderInputNames> {
 
-    private ArrayList<String> arrayJugadores;
+    private String[] arrayJugadores;
     private Partida partida;
 
-    public InputNamesAdapter(ArrayList<String> arrayJugadores, Partida partida) {
+    public InputNamesAdapter(String[] arrayJugadores, Partida partida) {
         this.arrayJugadores = arrayJugadores;
         this.partida = partida;
     }
@@ -37,7 +37,7 @@ public class InputNamesAdapter extends RecyclerView.Adapter<InputNamesAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderInputNames holder, int position) {
-        holder.assignData(arrayJugadores.get(position));
+        holder.assignData(arrayJugadores[position]);
     }
 
     @Override
