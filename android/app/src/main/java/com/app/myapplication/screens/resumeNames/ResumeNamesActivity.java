@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.app.myapplication.R;
 import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.roundOne.RoundOneActivity;
+import com.app.myapplication.screens.roundsActivity.RoundOneActivity;
 
 public class ResumeNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";

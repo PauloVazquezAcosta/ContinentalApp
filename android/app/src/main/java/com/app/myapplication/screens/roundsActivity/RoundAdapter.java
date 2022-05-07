@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.roundOne;
+package com.app.myapplication.screens.roundsActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -6,16 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.app.myapplication.R;
 import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.resumeNames.ResumeNamesAdapter;
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.w3c.dom.Text;
 
 public class RoundAdapter extends RecyclerView.Adapter<RoundAdapter.ViewHolderRound> {
 

@@ -41,7 +41,7 @@ public class Partida implements Serializable {
     }
 
     public void setJugador(int position, String nombre) {
-        Jugadores[position] = new Jugador(nombre);
+        Jugadores[position] = new Jugador(nombre, numeroRondas);
     }
 
     public int getNumeroRondas() {

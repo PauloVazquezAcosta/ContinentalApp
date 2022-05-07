@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".screens.roundOne.RoundOneActivity"
+            android:name=".screens.roundsActivity.RoundOneActivity"
             android:exported="false" />
         <activity
             android:name=".screens.resumeNames.ResumeNamesActivity"

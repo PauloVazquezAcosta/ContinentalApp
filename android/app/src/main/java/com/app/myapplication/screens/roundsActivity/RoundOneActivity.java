@@ -1,17 +1,15 @@
-package com.app.myapplication.screens.roundOne;
+package com.app.myapplication.screens.roundsActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.app.myapplication.R;
 import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.inputNames.InputNamesAdapter;
 
 public class RoundOneActivity extends AppCompatActivity {
 
@@ -46,9 +44,6 @@ public class RoundOneActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), RoundTwoActivity.class);
-                intent.putExtra(clavePartida, partida);
-                startActivity(intent);
             }
         });
 

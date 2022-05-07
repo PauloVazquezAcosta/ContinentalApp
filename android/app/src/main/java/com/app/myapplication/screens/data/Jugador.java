@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class Jugador implements Serializable {
     private String nombre;
-    private int puntuacion;
+    private int[] puntuacion;
 
-    public Jugador(String nombre) {
+    public Jugador(String nombre, int numeroRondas) {
         this.nombre = nombre;
-        puntuacion = 0;
+        puntuacion = new int[numeroRondas];
     }
 
     public String getNombre() {
@@ -19,11 +19,15 @@ public class Jugador implements Serializable {
         this.nombre = nombre;
     }
 
-    public int getPuntuacion() {
-        return puntuacion;
+    public void setPuntuacionRonda(int puntuacion, int position) {
+        this.puntuacion[position] = puntuacion;
     }
 
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion += puntuacion;
+    public int getPuntuacionTotal(){
+        int puntuacionTotal = 0;
+        for (int i = 0; i < puntuacion.length; i++) {
+            puntuacionTotal += puntuacion[i];
+        }
+        return puntuacionTotal;
     }
 }
