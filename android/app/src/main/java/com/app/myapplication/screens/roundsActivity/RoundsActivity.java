@@ -48,7 +48,6 @@ public class RoundsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-
                 if (partida.getRondaActual() < partida.getNumeroRondas()) {
                     partida.sumarRonda();
                     textoNumeroRonda.setText("Ronda " + partida.getRondaActual());
@@ -57,9 +56,12 @@ public class RoundsActivity extends AppCompatActivity {
                     RoundAdapter adapter = new RoundAdapter(partida);
                     recyclerJugadores.setAdapter(adapter);
 
+                    if (partida.getRondaActual() == partida.getNumeroRondas()) {
+                        TextView textoFinalizar = findViewById(R.id.textoSiguiente);
+                        textoFinalizar.setText("Finalizar");
+                    }
                 }else {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    intent.putExtra(clavePartida, partida);
                     startActivity(intent);
                 }
             }
@@ -76,10 +78,12 @@ public class RoundsActivity extends AppCompatActivity {
                 {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        finish();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("No", null)
                 .show();
     }
+
 }
