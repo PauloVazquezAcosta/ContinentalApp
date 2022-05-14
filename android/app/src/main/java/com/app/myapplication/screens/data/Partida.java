@@ -8,7 +8,6 @@ public class Partida implements Serializable {
     private Jugador[] Jugadores;
     private int numeroRondas;
     private String[] textoTituloJugadores;
-    private String[] textoNumeroRondas;
     private String[] jugadasRondas;
     private int rondaActual;
 
@@ -18,7 +17,6 @@ public class Partida implements Serializable {
         numeroRondas = 10;
         textoTituloJugadores = new String[numeroJugadores];
         setTextoTituloJugadores();
-        textoNumeroRondas = new String[numeroRondas];
         jugadasRondas = new String[numeroRondas];
         setJugadasRondas();
         rondaActual = 1;

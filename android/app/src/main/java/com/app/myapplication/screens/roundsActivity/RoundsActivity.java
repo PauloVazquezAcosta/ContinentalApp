@@ -53,6 +53,9 @@ public class RoundsActivity extends AppCompatActivity {
                     partida.sumarRonda();
                     textoNumeroRonda.setText("Ronda " + partida.getRondaActual());
                     textoJugadaRonda.setText(partida.getJugadasRondas()[partida.getRondaActual() - 1]);
+                    recyclerJugadores.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
+                    RoundAdapter adapter = new RoundAdapter(partida);
+                    recyclerJugadores.setAdapter(adapter);
 
                 }else {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
