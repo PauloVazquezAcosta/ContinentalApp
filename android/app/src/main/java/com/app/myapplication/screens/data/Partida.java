@@ -10,7 +10,7 @@ public class Partida implements Serializable {
     private String[] textoTituloJugadores;
     private String[] textoNumeroRondas;
     private String[] jugadasRondas;
-
+    private int rondaActual;
 
     public Partida(int numeroJugadores) {
         this.numeroJugadores = numeroJugadores;
@@ -19,17 +19,13 @@ public class Partida implements Serializable {
         textoTituloJugadores = new String[numeroJugadores];
         setTextoTituloJugadores();
         textoNumeroRondas = new String[numeroRondas];
-        setTextoNumeroRondas();
         jugadasRondas = new String[numeroRondas];
         setJugadasRondas();
+        rondaActual = 1;
     }
 
     public int getNumeroJugadores() {
         return numeroJugadores;
-    }
-
-    public void setNumeroJugadores(int numeroJugadores) {
-        this.numeroJugadores = numeroJugadores;
     }
 
     public Jugador[] getJugadores() {
@@ -42,24 +38,6 @@ public class Partida implements Serializable {
 
     public void setJugador(int position, String nombre) {
         Jugadores[position] = new Jugador(nombre, numeroRondas);
-    }
-
-    public int getNumeroRondas() {
-        return numeroRondas;
-    }
-
-    public void setNumeroRondas(int numeroRondas) {
-        this.numeroRondas = numeroRondas;
-    }
-
-    public String[] getTextoNumeroRondas() {
-        return textoNumeroRondas;
-    }
-
-    private void setTextoNumeroRondas() {
-        for (int i = 0; i < numeroRondas; i++) {
-            textoNumeroRondas[i] = "Ronda " + (i + 1);
-        }
     }
 
     public String[] getTextoTituloJugadores() {
@@ -88,6 +66,17 @@ public class Partida implements Serializable {
         jugadasRondas[7] = "Un trío y dos escaleras - 12 cartas";
         jugadasRondas[8] = "Tres escaleras - 13 cartas";
         jugadasRondas[9] = "Cuatro tríos - 13 cartas";
+    }
 
+    public int getRondaActual() {
+        return rondaActual;
+    }
+
+    public void sumarRonda() {
+        rondaActual++;
+    }
+
+    public int getNumeroRondas() {
+        return numeroRondas;
     }
 }

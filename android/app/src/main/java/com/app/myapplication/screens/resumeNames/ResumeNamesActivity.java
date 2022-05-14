@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.app.myapplication.R;
 import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.roundsActivity.RoundOneActivity;
+import com.app.myapplication.screens.roundsActivity.RoundsActivity;
 
 public class ResumeNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";
@@ -36,7 +36,7 @@ public class ResumeNamesActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), RoundOneActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RoundsActivity.class);
                 intent.putExtra(clavePartida, partida);
                 startActivity(intent);
             }

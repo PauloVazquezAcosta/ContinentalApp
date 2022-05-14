@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.roundsActivity.RoundOneActivity">
+    tools:context=".screens.roundsActivity.RoundsActivity">
 
     <View
         android:id="@+id/rectanguloSuperior"
@@ -42,7 +42,7 @@
         android:textColor="@color/white" />v
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerRoundOne"
+        android:id="@+id/recyclerRounds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/rectanguloSuperior"

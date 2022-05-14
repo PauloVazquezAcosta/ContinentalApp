@@ -14,13 +14,10 @@ import com.app.myapplication.screens.data.Jugador;
 import com.app.myapplication.screens.data.Partida;
 import com.app.myapplication.screens.resumeNames.ResumeNamesActivity;
 
-import java.util.ArrayList;
-
 public class InputNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";
-    private TextView textoNumeroJugadores;
-    private RecyclerView recyclerJugadores;
     private Partida partida;
+    private boolean isAllFieldsChecked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +26,10 @@ public class InputNamesActivity extends AppCompatActivity {
 
         partida = (Partida) getIntent().getSerializableExtra(clavePartida);
 
-        textoNumeroJugadores = findViewById(R.id.textoJugadores);
+        TextView textoNumeroJugadores = findViewById(R.id.textoJugadores);
         textoNumeroJugadores.setText(partida.getNumeroJugadores() + " jugadores");
 
-        recyclerJugadores = findViewById(R.id.recyclerInputNombreJugadores);
+        RecyclerView recyclerJugadores = findViewById(R.id.recyclerInputNombreJugadores);
         recyclerJugadores.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         InputNamesAdapter adapter = new InputNamesAdapter(partida);
@@ -43,8 +40,10 @@ public class InputNamesActivity extends AppCompatActivity {
         botonConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Jugador[] nombresJugadores = adapter.getJugadores();
 
+                isAllFieldsChecked = CheckAllFields();
+
+                Jugador[] nombresJugadores = adapter.getJugadores();
                 partida.setJugadores(nombresJugadores);
                 Intent intent = new Intent(getApplicationContext(), ResumeNamesActivity.class);
                 intent.putExtra(clavePartida, partida);
@@ -52,6 +51,8 @@ public class InputNamesActivity extends AppCompatActivity {
             }
         });
 
-
+    }
+    private boolean CheckAllFields() {
+        return false;
     }
 }
