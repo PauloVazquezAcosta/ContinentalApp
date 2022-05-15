@@ -1,11 +1,13 @@
 package com.app.myapplication.screens.data;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Partida implements Serializable {
 
     private int numeroJugadores;
-    private Jugador[] Jugadores;
+    private Jugador[] jugadores;
     private int numeroRondas;
     private String[] textoTituloJugadores;
     private String[] jugadasRondas;
@@ -13,7 +15,7 @@ public class Partida implements Serializable {
 
     public Partida(int numeroJugadores) {
         this.numeroJugadores = numeroJugadores;
-        Jugadores = new Jugador[numeroJugadores];
+        jugadores = new Jugador[numeroJugadores];
         numeroRondas = 10;
         textoTituloJugadores = new String[numeroJugadores];
         setTextoTituloJugadores();
@@ -27,15 +29,15 @@ public class Partida implements Serializable {
     }
 
     public Jugador[] getJugadores() {
-        return Jugadores;
+        return jugadores;
     }
 
     public void setJugadores(Jugador[] jugadores) {
-        this.Jugadores = jugadores;
+        this.jugadores = jugadores;
     }
 
     public void setJugador(int position, String nombre) {
-        Jugadores[position] = new Jugador(nombre, numeroRondas);
+        jugadores[position] = new Jugador(nombre, numeroRondas);
     }
 
     public String[] getTextoTituloJugadores() {
@@ -77,4 +79,12 @@ public class Partida implements Serializable {
     public int getNumeroRondas() {
         return numeroRondas;
     }
+
+    public Jugador[] getRanking() {
+
+        Comparator comparadorPuntuacion = Comparator.comparing(Jugador::getPuntuacionTotal);
+        Arrays.sort(jugadores, comparadorPuntuacion);
+        return jugadores;
+    }
+
 }

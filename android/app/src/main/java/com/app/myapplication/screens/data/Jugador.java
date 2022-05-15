@@ -15,10 +15,6 @@ public class Jugador implements Serializable {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public void setPuntuacionRonda(int puntuacion, int position) {
         this.puntuacion[position] = puntuacion;
     }

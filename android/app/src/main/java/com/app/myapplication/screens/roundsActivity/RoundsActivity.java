@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.app.myapplication.R;
 import com.app.myapplication.screens.data.Partida;
 import com.app.myapplication.screens.main.MainActivity;
+import com.app.myapplication.screens.resultsActivity.ResultsActivity;
 
 public class RoundsActivity extends AppCompatActivity {
 
@@ -61,7 +62,9 @@ public class RoundsActivity extends AppCompatActivity {
                         textoFinalizar.setText("Finalizar");
                     }
                 }else {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+                    Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
+                    intent.putExtra(clavePartida, partida);
                     startActivity(intent);
                 }
             }
@@ -80,6 +83,7 @@ public class RoundsActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 })
                 .setNegativeButton("No", null)
