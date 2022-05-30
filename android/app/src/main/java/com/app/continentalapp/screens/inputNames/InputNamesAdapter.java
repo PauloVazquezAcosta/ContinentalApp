@@ -15,7 +15,6 @@ import com.app.continentalapp.screens.data.Jugador;
 import com.app.continentalapp.screens.data.Partida;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.ArrayList;
 
 public class InputNamesAdapter extends RecyclerView.Adapter<InputNamesAdapter.ViewHolderInputNames> {
 

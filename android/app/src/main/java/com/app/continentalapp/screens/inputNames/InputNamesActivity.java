@@ -17,7 +17,6 @@ import com.app.continentalapp.screens.resumeNames.ResumeNamesActivity;
 public class InputNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";
     private Partida partida;
-    private boolean isAllFieldsChecked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +40,6 @@ public class InputNamesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                isAllFieldsChecked = CheckAllFields();
-
                 Jugador[] nombresJugadores = adapter.getJugadores();
                 partida.setJugadores(nombresJugadores);
                 Intent intent = new Intent(getApplicationContext(), ResumeNamesActivity.class);
@@ -51,8 +48,5 @@ public class InputNamesActivity extends AppCompatActivity {
             }
         });
 
-    }
-    private boolean CheckAllFields() {
-        return false;
     }
 }
