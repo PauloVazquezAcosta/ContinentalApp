@@ -77,7 +77,7 @@ public class RoundsActivity extends AppCompatActivity {
                         TextView textoFinalizar = findViewById(R.id.textoSiguiente);
                         textoFinalizar.setText("Finalizar");
                     }
-                }else {
+                } else {
                     // Cando se remata a partida vai mostrar os resultados finais
                     Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
                     intent.putExtra(clavePartida, partida);
@@ -95,8 +95,7 @@ public class RoundsActivity extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Saliendo de la partida")
                 .setMessage("¿Seguro de que quiere salir de la partida?")
-                .setPositiveButton("Sí", new DialogInterface.OnClickListener()
-                {
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);

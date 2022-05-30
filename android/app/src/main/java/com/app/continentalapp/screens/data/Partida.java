@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Comparator;
 
-/** Clase que representa á partida creada para levar a puntuación
- *
+/**
+ * Clase que representa á partida creada para levar a puntuación
  */
 public class Partida implements Serializable {
 
@@ -16,7 +16,8 @@ public class Partida implements Serializable {
     private String[] jugadasRondas;
     private int rondaActual;
 
-    /** Construtor da clase Partida, recibindo o número de xogadores xa inicializa o resto de parámetros
+    /**
+     * Construtor da clase Partida, recibindo o número de xogadores xa inicializa o resto de parámetros
      *
      * @param numeroJugadores cantidade de xogadores da partida
      */
@@ -31,7 +32,8 @@ public class Partida implements Serializable {
         rondaActual = 1;
     }
 
-    /** Devolve o número de xogadores da partida
+    /**
+     * Devolve o número de xogadores da partida
      *
      * @return
      */
@@ -39,7 +41,8 @@ public class Partida implements Serializable {
         return numeroJugadores;
     }
 
-    /** Devolve o listado de xogadores da partida
+    /**
+     * Devolve o listado de xogadores da partida
      *
      * @return
      */
@@ -47,7 +50,8 @@ public class Partida implements Serializable {
         return jugadores;
     }
 
-    /** Recibe o listado de xogadores e asígnao á partida
+    /**
+     * Recibe o listado de xogadores e asígnao á partida
      *
      * @param jugadores array de obxectos Jugador
      */
@@ -55,16 +59,18 @@ public class Partida implements Serializable {
         this.jugadores = jugadores;
     }
 
-    /** Recibe a posición e o nome e ubica ao xogador nesa posición
+    /**
+     * Recibe a posición e o nome e ubica ao xogador nesa posición
      *
      * @param position posición do xogador dentro da partida
-     * @param nombre nome do xogador
+     * @param nombre   nome do xogador
      */
     public void setJugador(int position, String nombre) {
         jugadores[position] = new Jugador(nombre, numeroRondas);
     }
 
-    /** Devolve un array co texto indicativo da posición de cada xogador
+    /**
+     * Devolve un array co texto indicativo da posición de cada xogador
      *
      * @return
      */
@@ -72,8 +78,8 @@ public class Partida implements Serializable {
         return textoTituloJugadores;
     }
 
-    /** Setea o texto indicativo da posición de cada un dos xogadores
-     *
+    /**
+     * Setea o texto indicativo da posición de cada un dos xogadores
      */
     private void setTextoTituloJugadores() {
         for (int i = 0; i < numeroJugadores; i++) {
@@ -82,7 +88,8 @@ public class Partida implements Serializable {
         }
     }
 
-    /** Devolve un array co listado de xogadas da partida que se vai xogar
+    /**
+     * Devolve un array co listado de xogadas da partida que se vai xogar
      *
      * @return
      */
@@ -90,8 +97,8 @@ public class Partida implements Serializable {
         return jugadasRondas;
     }
 
-    /** Setea o listado de xogadas da partida a xogar
-     *
+    /**
+     * Setea o listado de xogadas da partida a xogar
      */
     private void setJugadasRondas() {
         jugadasRondas[0] = "Un trío - 4 cartas";
@@ -106,7 +113,8 @@ public class Partida implements Serializable {
         jugadasRondas[9] = "Cuatro tríos - 13 cartas";
     }
 
-    /** Devolve a ronda actual na que se atopa a partida
+    /**
+     * Devolve a ronda actual na que se atopa a partida
      *
      * @return
      */
@@ -114,14 +122,15 @@ public class Partida implements Serializable {
         return rondaActual;
     }
 
-    /** Suma unha ronda á partida para iniciar a seguinte xogada
-     *
+    /**
+     * Suma unha ronda á partida para iniciar a seguinte xogada
      */
     public void sumarRonda() {
         rondaActual++;
     }
 
-    /** Devolve o número de rondas totais da partida
+    /**
+     * Devolve o número de rondas totais da partida
      *
      * @return
      */
@@ -129,7 +138,8 @@ public class Partida implements Serializable {
         return numeroRondas;
     }
 
-    /** Devolve un array de xogadores en orde para sinalar ao gañador
+    /**
+     * Devolve un array de xogadores en orde para sinalar ao gañador
      *
      * @return
      */

@@ -42,7 +42,9 @@ public class InputNamesAdapter extends RecyclerView.Adapter<InputNamesAdapter.Vi
         return partida.getNumeroJugadores();
     }
 
-    public Jugador[] getJugadores() { return partida.getJugadores(); }
+    public Jugador[] getJugadores() {
+        return partida.getJugadores();
+    }
 
     public class ViewHolderInputNames extends RecyclerView.ViewHolder {
 

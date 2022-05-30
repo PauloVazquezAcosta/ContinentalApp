@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.app.continentalapp.R;
 import com.app.continentalapp.screens.data.Partida;
 import com.google.android.material.textfield.TextInputEditText;
@@ -51,6 +53,7 @@ public class RoundAdapter extends RecyclerView.Adapter<RoundAdapter.ViewHolderRo
             puntuacionRonda = itemView.findViewById(R.id.puntuacionJugadorInput);
             puntuacionTotal = itemView.findViewById(R.id.contadorPuntuacion);
         }
+
         public void assignData(Partida partida) {
             nombreJugador.setText(partida.getJugadores()[getAdapterPosition()].getNombre());
             puntuacionTotal.setText(Integer.toString(partida.getJugadores()[getAdapterPosition()].getPuntuacionTotal()));
@@ -64,7 +67,7 @@ public class RoundAdapter extends RecyclerView.Adapter<RoundAdapter.ViewHolderRo
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                     try {
                         partida.getJugadores()[getAdapterPosition()].setPuntuacionRonda(Integer.parseInt(charSequence.toString()), partida.getRondaActual());
-                    }catch (NumberFormatException nfe) {
+                    } catch (NumberFormatException nfe) {
                         partida.getJugadores()[getAdapterPosition()].setPuntuacionRonda(0, partida.getRondaActual());
                     }
                 }

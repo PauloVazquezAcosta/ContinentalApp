@@ -12,7 +12,7 @@ import com.app.continentalapp.R;
 import com.app.continentalapp.screens.data.Jugador;
 import com.app.continentalapp.screens.data.Partida;
 
-public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ViewHolderResults>{
+public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ViewHolderResults> {
     private Partida partida;
 
     public ResultsAdapter(Partida partida) {

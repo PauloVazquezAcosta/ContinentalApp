@@ -61,8 +61,7 @@ public class ResultsActivity extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Volviendo a la pantalla inicial")
                 .setMessage("¿Seguro de que quiere salir de la pantalla de resultados?")
-                .setPositiveButton("Sí", new DialogInterface.OnClickListener()
-                {
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);

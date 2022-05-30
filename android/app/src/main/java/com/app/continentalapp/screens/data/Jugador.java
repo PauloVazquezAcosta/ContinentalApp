@@ -2,16 +2,17 @@ package com.app.continentalapp.screens.data;
 
 import java.io.Serializable;
 
-/** Clase que representa a cada un dos xogadores da partida creada
- *
+/**
+ * Clase que representa a cada un dos xogadores da partida creada
  */
 public class Jugador implements Serializable {
     private String nombre;
     private int[] puntuacion;
 
-    /** Construtor da clase Jugador
+    /**
+     * Construtor da clase Jugador
      *
-     * @param nombre nome do xogador
+     * @param nombre       nome do xogador
      * @param numeroRondas número de rondas para inicializar a súa puntuación
      */
     public Jugador(String nombre, int numeroRondas) {
@@ -19,7 +20,8 @@ public class Jugador implements Serializable {
         puntuacion = new int[numeroRondas];
     }
 
-    /** Devolve o nome dun xogador específico
+    /**
+     * Devolve o nome dun xogador específico
      *
      * @return
      */
@@ -27,7 +29,8 @@ public class Jugador implements Serializable {
         return nombre;
     }
 
-    /** Recibe unha puntuación e a posición da ronda e setea a súa puntuación
+    /**
+     * Recibe unha puntuación e a posición da ronda e setea a súa puntuación
      *
      * @param puntuacion
      * @param position
@@ -36,11 +39,12 @@ public class Jugador implements Serializable {
         this.puntuacion[position] = puntuacion;
     }
 
-    /** Devolve a puntuación total do xogador
+    /**
+     * Devolve a puntuación total do xogador
      *
      * @return
      */
-    public int getPuntuacionTotal(){
+    public int getPuntuacionTotal() {
         int puntuacionTotal = 0;
         for (int i = 0; i < puntuacion.length; i++) {
             puntuacionTotal += puntuacion[i];
