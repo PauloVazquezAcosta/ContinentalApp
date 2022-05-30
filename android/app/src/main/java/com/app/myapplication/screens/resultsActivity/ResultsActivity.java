@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.app.myapplication.R;
 import com.app.myapplication.screens.data.Partida;
+import com.app.myapplication.screens.main.MainActivity;
 import com.app.myapplication.screens.resumeNames.ResumeNamesAdapter;
 import com.app.myapplication.screens.roundsActivity.RoundsActivity;
 
@@ -42,6 +43,8 @@ public class ResultsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 

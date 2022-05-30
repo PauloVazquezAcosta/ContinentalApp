@@ -15,6 +15,6 @@
     <string name="puntuacion">Puntuación</string>
     <string name="contadorPuntuacion">0</string>
     <string name="nombre">Nombre</string>
-    <string name="resumen">Resumen por rondas</string>
+    <string name="volver">Volver a jugar</string>
     <string name="ganador">Ganador/a</string>
 </resources>
