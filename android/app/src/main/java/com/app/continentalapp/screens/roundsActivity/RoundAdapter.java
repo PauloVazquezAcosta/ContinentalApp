@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.roundsActivity;
+package com.app.continentalapp.screens.roundsActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.app.myapplication.R;
-import com.app.myapplication.screens.data.Partida;
+import com.app.continentalapp.R;
+import com.app.continentalapp.screens.data.Partida;
 import com.google.android.material.textfield.TextInputEditText;
 
 

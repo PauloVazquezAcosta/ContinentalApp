@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.roundsActivity;
+package com.app.continentalapp.screens.roundsActivity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.app.myapplication.R;
-import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.main.MainActivity;
-import com.app.myapplication.screens.resultsActivity.ResultsActivity;
+import com.app.continentalapp.R;
+import com.app.continentalapp.screens.data.Partida;
+import com.app.continentalapp.screens.main.MainActivity;
+import com.app.continentalapp.screens.resultsActivity.ResultsActivity;
 
 public class RoundsActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.inputNames;
+package com.app.continentalapp.screens.inputNames;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,10 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.app.myapplication.R;
-import com.app.myapplication.screens.data.Jugador;
-import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.resumeNames.ResumeNamesActivity;
+import com.app.continentalapp.R;
+import com.app.continentalapp.screens.data.Jugador;
+import com.app.continentalapp.screens.data.Partida;
+import com.app.continentalapp.screens.resumeNames.ResumeNamesActivity;
 
 public class InputNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";

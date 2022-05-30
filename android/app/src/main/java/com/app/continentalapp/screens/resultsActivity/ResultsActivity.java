@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.resultsActivity;
+package com.app.continentalapp.screens.resultsActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -9,11 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.app.myapplication.R;
-import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.main.MainActivity;
-import com.app.myapplication.screens.resumeNames.ResumeNamesAdapter;
-import com.app.myapplication.screens.roundsActivity.RoundsActivity;
+import com.app.continentalapp.R;
+import com.app.continentalapp.screens.data.Partida;
+import com.app.continentalapp.screens.main.MainActivity;
+import com.app.continentalapp.screens.resumeNames.ResumeNamesAdapter;
+import com.app.continentalapp.screens.roundsActivity.RoundsActivity;
 
 public class ResultsActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";

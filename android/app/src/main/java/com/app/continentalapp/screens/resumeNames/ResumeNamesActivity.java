@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.resumeNames;
+package com.app.continentalapp.screens.resumeNames;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.app.myapplication.R;
-import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.roundsActivity.RoundsActivity;
+import com.app.continentalapp.R;
+import com.app.continentalapp.screens.data.Partida;
+import com.app.continentalapp.screens.roundsActivity.RoundsActivity;
 
 public class ResumeNamesActivity extends AppCompatActivity {
     private static final String clavePartida = "PARTIDA";

@@ -1,4 +1,4 @@
-package com.app.myapplication.screens.main;
+package com.app.continentalapp.screens.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
 
-import com.app.myapplication.R;
-import com.app.myapplication.screens.data.Partida;
-import com.app.myapplication.screens.inputNames.InputNamesActivity;
+import com.app.continentalapp.R;
+import com.app.continentalapp.screens.data.Partida;
+import com.app.continentalapp.screens.inputNames.InputNamesActivity;
 
 
 public class MainActivity extends AppCompatActivity {
