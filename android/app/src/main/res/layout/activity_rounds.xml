@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.roundsActivity.RoundsActivity">
+
+    <View
+        android:id="@+id/rectanguloSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/dark_blue"/>
+
+    <TextView
+        android:id="@+id/numeroRonda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/rectanguloSuperior"
+        app:layout_constraintRight_toRightOf="@id/rectanguloSuperior"
+        app:layout_constraintTop_toTopOf="@id/rectanguloSuperior"
+        app:layout_constraintBottom_toBottomOf="@id/rectanguloSuperior"
+        app:layout_constraintVertical_bias="0.33"
+        android:text="@string/numero_ronda"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/jugadaRonda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/rectanguloSuperior"
+        app:layout_constraintRight_toRightOf="@id/rectanguloSuperior"
+        app:layout_constraintTop_toTopOf="@id/rectanguloSuperior"
+        app:layout_constraintBottom_toBottomOf="@id/rectanguloSuperior"
+        app:layout_constraintVertical_bias="0.66"
+        android:text="@string/jugada"
+        android:textSize="20sp"
+        android:textColor="@color/white" />v
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rectanguloSuperior"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_gravity="center_horizontal"/>
+
+    <View
+        android:id="@+id/botonSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textoSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siguiente"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="@id/botonSiguiente"
+        app:layout_constraintBottom_toBottomOf="@id/botonSiguiente"
+        app:layout_constraintRight_toRightOf="@id/botonSiguiente"
+        app:layout_constraintLeft_toLeftOf="@id/botonSiguiente"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

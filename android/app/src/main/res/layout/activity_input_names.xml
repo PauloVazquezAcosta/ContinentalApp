@@ -4,38 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.main.MainActivity">
+    tools:context=".screens.inputNames.InputNamesActivity">
 
     <TextView
         android:id="@+id/textoJugadores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/jugadores"
+        android:text="@string/numero_jugadores"
         android:textAlignment="textStart"
-        android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="40sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    <NumberPicker
-        android:id="@+id/selectorJugadores"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerInputNombreJugadores"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/botonEmpezar"
+        app:layout_constraintTop_toBottomOf="@id/textoJugadores"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textoJugadores" />
+        android:layout_marginHorizontal="100dp"
+        app:layout_constraintBottom_toTopOf="@id/botonConfirmar" />
 
     <View
-        android:id="@+id/botonEmpezar"
+        android:id="@+id/botonConfirmar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/dark_blue"
+        android:text="@string/empezar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
@@ -43,12 +44,12 @@
         android:id="@+id/textoSiguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/empezar"
+        android:text="@string/confirmar"
         android:textColor="@color/white"
         android:textAllCaps="true"
-        app:layout_constraintTop_toTopOf="@id/botonEmpezar"
-        app:layout_constraintBottom_toBottomOf="@id/botonEmpezar"
-        app:layout_constraintRight_toRightOf="@id/botonEmpezar"
-        app:layout_constraintLeft_toLeftOf="@id/botonEmpezar"/>
+        app:layout_constraintTop_toTopOf="@id/botonConfirmar"
+        app:layout_constraintBottom_toBottomOf="@id/botonConfirmar"
+        app:layout_constraintRight_toRightOf="@id/botonConfirmar"
+        app:layout_constraintLeft_toLeftOf="@id/botonConfirmar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
