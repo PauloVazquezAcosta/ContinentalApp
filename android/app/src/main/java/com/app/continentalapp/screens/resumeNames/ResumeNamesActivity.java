@@ -22,8 +22,10 @@ public class ResumeNamesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resume_names);
 
+        // Recupera a partida do bundle, a creada na pantalla MainActivity
         partida = (Partida) getIntent().getSerializableExtra(clavePartida);
 
+        // Crea o listado de nomes dos xogadores para confirmar quen vai xogar
         recyclerJugadores = findViewById(R.id.recyclerResumenNombresJugadores);
         recyclerJugadores.setLayoutManager(new GridLayoutManager(this, 1));
 
@@ -32,6 +34,7 @@ public class ResumeNamesActivity extends AppCompatActivity {
 
         View botonJugar = findViewById(R.id.botonJugar);
 
+        // Confirma o nome dos xogadores antes de comezar, ao clickar, envía a partida á seguinte pantalla
         botonJugar.setOnClickListener(new View.OnClickListener() {
 
             @Override

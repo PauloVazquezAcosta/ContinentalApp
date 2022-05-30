@@ -24,17 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
         selectorJugadores = findViewById(R.id.selectorJugadores);
 
+        // Valores mínimos e máximos para os xogadores de cada partida
         selectorJugadores.setMinValue(2);
         selectorJugadores.setMaxValue(4);
 
+        // Asigna o valor inicial á variable para que teña eses participantes por defecto
         numeroJugadores = selectorJugadores.getValue();
 
+        // No caso de que o usuario cambie o valor no selector, asignará este valor á variable
         selectorJugadores.setOnValueChangedListener((numberPicker, i, j) -> {
             numeroJugadores = selectorJugadores.getValue();
         });
 
         final View botonEmpezar = findViewById(R.id.botonEmpezar);
 
+        // Ao facer click no botón, crea a partida co número de xogadores escollido e envíaa á seguinte pantalla
         botonEmpezar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Partida partida = new Partida(numeroJugadores);

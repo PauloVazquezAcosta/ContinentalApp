@@ -26,19 +26,23 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+        // Recupera a partida do bundle, a creada na pantalla MainActivity
         partida = (Partida) getIntent().getSerializableExtra(clavePartida);
 
+        // Crea o listado de resultados, mostrando quen gañou e o orde dos seguintes xogadores
         recyclerResultados = findViewById(R.id.recyclerResumenResultados);
         recyclerResultados.setLayoutManager(new GridLayoutManager(this, 1));
 
         ResultsAdapter adapter = new ResultsAdapter(partida);
         recyclerResultados.setAdapter(adapter);
 
+        // Mostra o nome do xogador gañador, busca o ranking da partida e mostra o primeiro valor
         nombreGanador = findViewById(R.id.nombreGanador);
         nombreGanador.setText(partida.getRanking()[0].getNombre());
 
         View botonContinuar = findViewById(R.id.botonSeguir);
 
+        // Ao clickar no botón volverá á pantalla inicial
         botonContinuar.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -50,6 +54,7 @@ public class ResultsActivity extends AppCompatActivity {
 
     }
 
+    // No caso de pulsar o botón para ir á pantalla anterior, a app preguntará confirmación pero non deixará volver, irá á pantalla inicial
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
