@@ -13,15 +13,18 @@
         android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nombreJugadorLayout"
-        android:layout_width="match_parent"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:hint="@string/nombre_jugador"
         android:layout_marginTop="5dp"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@id/numeroJugador"
+        app:layout_constraintLeft_toLeftOf="@id/numeroJugador"
+        app:layout_constraintRight_toRightOf="@id/numeroJugador"
         app:startIconDrawable="@drawable/ic_person"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -33,5 +36,13 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/linea_separadora"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintTop_toBottomOf="@id/nombreJugadorLayout"
+        android:layout_marginTop="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
