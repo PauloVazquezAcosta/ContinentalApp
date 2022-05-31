@@ -66,9 +66,9 @@ public class RoundAdapter extends RecyclerView.Adapter<RoundAdapter.ViewHolderRo
                 @Override
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                     try {
-                        partida.getJugadores()[getAdapterPosition()].setPuntuacionRonda(Integer.parseInt(charSequence.toString()), partida.getRondaActual());
+                        partida.getJugadores()[getAdapterPosition()].setPuntuacionRonda(Integer.parseInt(charSequence.toString()), partida.getRondaActual() - 1);
                     } catch (NumberFormatException nfe) {
-                        partida.getJugadores()[getAdapterPosition()].setPuntuacionRonda(0, partida.getRondaActual());
+                        partida.getJugadores()[getAdapterPosition()].setPuntuacionRonda(0, partida.getRondaActual() - 1);
                     }
                 }
 
