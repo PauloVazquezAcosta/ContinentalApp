@@ -53,7 +53,7 @@ O código pode ser visto directamente no [repositorio](https://github.com/PauloV
 
 ### Diagrama UML
 O diagrama UML, feito con [Flowchart Maker & Online Diagram Software](https://app.diagrams.net/) que serviu de base para iniciar este proxecto é o seguinte:
-![Diagrama UML ContinentalApp](https://raw.githubusercontent.com/PauloVazquezAcosta/ContinentalApp/main/android/app/src/main/res/drawable/UML%20ContinentalApp.jpg)
+![Diagrama UML ContinentalApp](https://raw.githubusercontent.com/PauloVazquezAcosta/ContinentalApp/main/android/app/src/main/res/drawable/uml_continental_app.jpg)
 
 ## Roadmap
 - [x] Análise do problema
