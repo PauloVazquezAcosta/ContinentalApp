@@ -82,6 +82,7 @@ public class RoundsActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
                     intent.putExtra(clavePartida, partida);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

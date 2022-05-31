@@ -42,6 +42,7 @@ public class ResumeNamesActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), RoundsActivity.class);
                 intent.putExtra(clavePartida, partida);
                 startActivity(intent);
+                finish();
             }
         });
 

@@ -49,6 +49,7 @@ public class InputNamesActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ResumeNamesActivity.class);
                 intent.putExtra(clavePartida, partida);
                 startActivity(intent);
+                finish();
             }
         });
 
