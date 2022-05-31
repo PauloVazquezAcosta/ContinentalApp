@@ -32,11 +32,11 @@ public class Jugador implements Serializable {
     /**
      * Recibe unha puntuación e a posición da ronda e setea a súa puntuación
      *
-     * @param puntuacion
-     * @param position
+     * @param puntuacion Puntuación a gardar
+     * @param ronda Ronda na que se conseguiu a puntuación
      */
-    public void setPuntuacionRonda(int puntuacion, int position) {
-        this.puntuacion[position] = puntuacion;
+    public void setPuntuacionRonda(int puntuacion, int ronda) {
+        this.puntuacion[ronda] = puntuacion;
     }
 
     /**
